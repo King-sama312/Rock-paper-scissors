@@ -23,13 +23,7 @@ function GetHumanChoice() {
     return ChoiceString
 }
 
-let computerChoice = GetComputerChoice()
-let humanChoice = GetHumanChoice()
-
-console.log("You chose", humanChoice)
-console.log("Computer chose", computerChoice)
-
-function determineWinner() {
+function determineWinner(humanChoice, computerChoice) {
     if (computerChoice == humanChoice) {
         return "It's a tie!"
     }
@@ -59,5 +53,45 @@ function determineWinner() {
     }
 }
 
-console.log(determineWinner())
+function playRound() {
+    let computerChoice = GetComputerChoice()
+    let humanChoice = GetHumanChoice()
+
+    console.log("You chose", humanChoice)
+    console.log("Computer chose", computerChoice)
+
+    let result = determineWinner(humanChoice, computerChoice) 
+    console.log(result)
+    return result
+}
+
+function playGame(){
+    let playerScore = 0;
+    let computerScore = 0;
+
+    for (let i = 1; i <= 5; i++) {
+        let result = playRound(); 
+
+        if (result === "You win!") {
+            playerScore += 1;
+        }
+        else if (result === "You lose!") {
+            computerScore += 1;
+        }
+
+        console.log(`Score after round ${i}: You = ${playerScore}, Computer = ${computerScore}`);
+    }
+
+    if (playerScore > computerScore) {
+        console.log("You won!! Yayy! 🤗");
+    } else if (playerScore < computerScore) {
+        console.log("You lose!! 😫");
+    } else {
+        console.log("It's a tie overall! 😐");
+    }
+}
+
+
+playGame()
+
 
