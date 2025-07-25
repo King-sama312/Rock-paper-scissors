@@ -7,15 +7,15 @@ function GetComputerChoice() {
         return "paper"
     }
     else {
-        return "scissors"
+        return "scissor"
     }
 }
 
 
 function GetHumanChoice() {
-    let userChoice = prompt("Choose rock, paper or scissors")
+    let userChoice = prompt("Choose rock, paper or scissor")
     let ChoiceString = userChoice.toLowerCase()
-    if (ChoiceString !== "rock" && ChoiceString !== "paper" && ChoiceString !== "scissors") {
+    if (ChoiceString !== "rock" && ChoiceString !== "paper" && ChoiceString !== "scissor") {
         alert("Invalid choice! Please try again.")
         return GetHumanChoice() // recursive retry
     }
@@ -28,14 +28,14 @@ function determineWinner(humanChoice, computerChoice) {
         return "It's a tie!"
     }
     else if (humanChoice == "rock") {
-        if (computerChoice == "scissors") {
+        if (computerChoice == "scissor") {
             return "You win!"
         }
         else {
             return "You lose!"
         }
     }
-    else if (humanChoice == "scissors") {
+    else if (humanChoice == "scissor") {
         if (computerChoice == "paper") {
             return "You win!"
         }
@@ -70,7 +70,7 @@ function playGame(){
     let computerScore = 0;
 
     for (let i = 1; i <= 5; i++) {
-        let result = playRound(); 
+        let result = playRound(); // declare result properly
 
         if (result === "You win!") {
             playerScore += 1;
