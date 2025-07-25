@@ -35,6 +35,15 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
+.btn-container button:hover:enabled {
+    background: #2980b9;
+}
+
+.btn-container button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
 .choice-btn {
     background-color: #3b82f6;
     color: white;
@@ -71,3 +80,20 @@ h2 {
     background-color: #dc2626;
 }
 
+
+#next-round-btn {
+  background-color: #10b981; 
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+  display: none; /
+}
+
+#next-round-btn:hover {
+  background-color: #059669; 
+}
