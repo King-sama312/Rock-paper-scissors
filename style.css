@@ -36,7 +36,7 @@ h2 {
 }
 
 .btn-container button:hover:enabled {
-    background: #2980b9;
+    background: #2563eb;
 }
 
 .btn-container button:disabled {
@@ -55,9 +55,6 @@ h2 {
     transition: background 0.2s;
 }
 
-.choice-btn:hover {
-    background-color: #2563eb;
-}
 
 .result p {
     margin: 0.5rem 0;

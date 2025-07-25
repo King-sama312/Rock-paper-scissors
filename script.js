@@ -3,7 +3,6 @@ let computerScore = 0;
 let roundCount = 0;
 const maxRounds = 5;
 
-const loader = document.getElementById("loader");
 const buttons = document.querySelectorAll(".choice-btn");
 const resultText = document.getElementById("round-result");
 const scoreText = document.getElementById("score");
